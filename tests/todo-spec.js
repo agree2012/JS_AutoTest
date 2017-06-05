@@ -9,8 +9,9 @@ describe('angularJs homepage ', function () {
     describe('Greetings section', function () {
         it('should greet the user', function () {
             pageObject = angularPage.getAngularOPage();
-            pageObject.typeName('Bob');
-            expect(pageObject.greeting).toEqual('Hello Bob!')
+            // pageObject.typeName('Bob');
+            // expect(pageObject.greeting).toEqual('Hello Bob!')
+            expect(pageObject).toEqual(angularPage.getAngularOPage())
         });
     });
 });
