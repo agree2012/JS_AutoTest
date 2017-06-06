@@ -1,8 +1,17 @@
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 describe('angularjs homepage', function() {
   it('should greet the named user', function() {
-    $timeout(30);
+    sleep(20000);
     browser.get('http://www.angularjs.org');
-    $timeout(30);
+   
 
     element(by.model('yourName')).sendKeys('Julie');
 
