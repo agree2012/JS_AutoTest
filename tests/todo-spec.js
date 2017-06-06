@@ -1,8 +1,3 @@
-window.onload = function(){
-   setInterval(function(){
-       alert("Hello");
-   }, 40000);
-};
 describe('angularjs homepage', function() {
   it('should greet the named user', function() {
     browser.get('http://www.angularjs.org');
