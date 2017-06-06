@@ -11,15 +11,15 @@ describe('angularjs homepage', function() {
   it('should greet the named user', function() {
     
     browser.get('http://www.angularjs.org');
-    sleep(20000);
+    
 
     element(by.model('yourName')).sendKeys('Julie');
 
     var greeting = element(by.binding('yourName'));
-
+    sleep(10000);
     expect(greeting.getText()).toEqual('Hello Julie!');
   });
-});
+
 
   describe('todo list', function() {
     var todoList;
@@ -46,3 +46,4 @@ describe('angularjs homepage', function() {
       expect(todoList.get(2).getText()).toEqual('write a protractor test');
     });
   });
+});
