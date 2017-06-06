@@ -9,9 +9,9 @@ function sleep(milliseconds) {
 
 describe('angularjs homepage', function() {
   it('should greet the named user', function() {
-    sleep(20000);
+    
     browser.get('http://www.angularjs.org');
-   
+    sleep(20000);
 
     element(by.model('yourName')).sendKeys('Julie');
 
