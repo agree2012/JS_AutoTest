@@ -8,7 +8,7 @@ var pageObject;
 describe('angularJs homepage ', function () {
     describe('Greetings section', function () {
         it('should greet the user', function () {
-            pageObject = angularPage.getAngularOPage();
+            pageObject = angularPage.getAngularPage();
             pageObject.typeName('Bob');
             expect(pageObject.greeting).toEqual('Hello Bob!')
          });
