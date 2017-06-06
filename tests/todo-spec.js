@@ -7,20 +7,22 @@ function sleep(milliseconds) {
   }
 }
 
-describe('angularjs homepage', function() {
-  it('should greet the named user', function() {
-    
-    browser.get('http://www.angularjs.org');
-    
-
-    
-  });
-
-
   describe('todo list', function() {
-    var todoList;
+    
+    it('should greet the named user', function() {
+    
+      browser.get('http://www.angularjs.org');
+    
+      element(by.model('yourName')).sendKeys('Julie');
 
-    beforeEach(function() {
+      var greeting = element(by.binding('yourName'));
+
+      expect(greeting.getText()).toEqual('Hello Julie!');
+     });
+    
+   var todoList;
+
+   beforeEach(function() {
       browser.get('http://www.angularjs.org');
 
       todoList = element.all(by.repeater('todo in todoList.todos'));
@@ -42,4 +44,4 @@ describe('angularjs homepage', function() {
       expect(todoList.get(2).getText()).toEqual('write a protractor test');
     });
   });
-});
+
