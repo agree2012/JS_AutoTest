@@ -8,10 +8,10 @@ function sleep(milliseconds) {
 }
 
   describe('todo list', function() {
-    
+    browser.get('http://www.angularjs.org');
     it('should greet the named user', function() {
     
-      browser.get('http://www.angularjs.org');
+      
     
       element(by.model('yourName')).sendKeys('Julie');
 
@@ -23,8 +23,7 @@ function sleep(milliseconds) {
    var todoList;
 
    beforeEach(function() {
-      browser.get('http://www.angularjs.org');
-
+     
       todoList = element.all(by.repeater('todo in todoList.todos'));
     });
 
