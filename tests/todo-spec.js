@@ -25,5 +25,4 @@
       expect(todoList.count()).toEqual(3);
       expect(todoList.get(2).getText()).toEqual('write a protractor test');
      });
-  }
-});
+  });
