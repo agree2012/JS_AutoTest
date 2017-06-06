@@ -1,18 +1,21 @@
-  describe('todo list', function() {
+  describe('todo list', function()
+  {
     var todoList;
 
-    beforeEach(function() {
-      browser.get('http://www.angularjs.org');
-
-      todoList = element.all(by.repeater('todo in todoList.todos'));
+    beforeEach(function()
+    {
+        browser.get('http://www.angularjs.org');
+        todoList = element.all(by.repeater('todo in todoList.todos'));
     });
 
-    it('should list todos', function() {
+    it('should list todos', function() 
+    {
       expect(todoList.count()).toEqual(2);
       expect(todoList.get(1).getText()).toEqual('build an AngularJS app');
     });
 
-    it('should add a todo', function() {
+    it('should add a todo', function() 
+    {
       var addTodo = element(by.model('todoList.todoText'));
       var addButton = element(by.css('[value="add"]'));
 
@@ -21,6 +24,6 @@
 
       expect(todoList.count()).toEqual(3);
       expect(todoList.get(2).getText()).toEqual('write a protractor test');
-    });
-  });
+     });
+  }
 });
